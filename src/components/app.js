@@ -14,14 +14,14 @@ export default class App extends React.Component {
     if (this.state.showList){
       return (
         <section>
-          <Input />
+          <Input clicked={e => this.setState({ showList: false })}/>
           <List />
         </section>
       );
     }
     return (
      <section>
-      <Input />
+        <Input clicked={e => this.setState({showList: true})}/>
     </section>
   );
 }

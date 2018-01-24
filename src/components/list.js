@@ -1,5 +1,8 @@
 import React from 'react';
+import './list.css';
+
 import Item from './item';
+
 
 export default function List(props){
   return (

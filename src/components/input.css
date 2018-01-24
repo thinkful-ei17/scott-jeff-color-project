@@ -1,0 +1,12 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h2 :hover {
+  color: red;
+}
+
+a :visited {
+  color: black;
+}

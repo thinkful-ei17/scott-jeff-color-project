@@ -3,6 +3,8 @@ import Input from './input';
 import List from './list';
 import Item from './item';
 
+import './app.css';
+
 export default class App extends React.Component {
     
   constructor(props){
@@ -14,12 +16,15 @@ export default class App extends React.Component {
         }
 
   render() {
+    const colorRender = {
+      backgroundColor: this.state.color
+    };
 
     if (this.state.showList){
       return (
-        <section>
+        <section style={colorRender}>
           <Input clicked={e => this.setState({ showList: false })}/>
-          <List clicked={color => console.log(color)} />
+          <List clicked={color => this.setState({color})} />
         </section>
       );
     }
@@ -30,3 +35,6 @@ export default class App extends React.Component {
   );
 }
 }
+
+//BEYOND MVP: RGB Slider
+//Hexademical input 

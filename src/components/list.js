@@ -3,10 +3,10 @@ import Item from './item';
 import './list.css';
 
 export default function List(props){
-  return (    
+
+  return (   
     <ul className='list'>
-        <Item color="red" clicked={color => props.clicked(color)}
-/>
+        <Item color="red" clicked={color => props.clicked(color)}/>
         <Item color="orange" clicked={color => props.clicked(color)}/>
         <Item color="yellow" clicked={color => props.clicked(color)}/>
         <Item color="green" clicked={color => props.clicked(color)}/>
@@ -16,4 +16,3 @@ export default function List(props){
   )
 }
 
-// onClick={e => props.clicked(e.target.color)}

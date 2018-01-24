@@ -15,7 +15,6 @@ html {
 .colorSquare {
   display: inline-block;
   margin: 100px auto 20px auto;
-  border: 5px solid blue;
   background-color: red;
   height: 300px;
   width: 300px;

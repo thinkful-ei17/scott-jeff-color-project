@@ -1,16 +1,30 @@
-section {
-  display: inline-block;
-  margin: 100px auto;
-  /* text-align: center; */
-  background-color: red;
-  height: 300px;
-  width: 300px;
-}
-
 html {
   background-color: black;
   text-align: center;
   height: 100%;
 }
 
+/* section {
+  display: inline-block;
+  margin: 100px auto;
+  background-color: red;
+  height: 300px;
+  width: 300px;
+}  */
+
+.colorSquare {
+  display: inline-block;
+  margin: 100px auto 20px auto;
+  border: 5px solid blue;
+  background-color: red;
+  height: 300px;
+  width: 300px;
+}
+
+.sliderSection input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
 

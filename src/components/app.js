@@ -13,34 +13,38 @@ export default class App extends React.Component {
           this.state = {
             showList: false,
             allColors:[
-              {color: 'red', rgb:'rgb(255, 0, 0)'},
-              {color: 'orange', rgb:'rgb(255, 165, 0)'},
-              {color: 'yellow', rgb: 'rgb(255, 255, 0)'},
-              {color: 'green', rgb: 'rgb(0, 128, 0)'},
-              {color: 'blue', rgb: 'rgb(0, 0, 255)'},
-              {color: 'purple', rgb: 'rgb(128, 0, 128)'}
+              {color: 'red', rgb: {red: 255, green:0, blue: 0}},
+              {color: 'orange', rgb:{red: 255, green:165, blue: 0}},
+              {color: 'yellow', rgb: {red: 255, green:255, blue: 0}},
+              {color: 'green', rgb: {red: 0, green:128, blue: 0}},
+              {color: 'blue', rgb: {red: 0, green:0, blue: 255}},
+              {color: 'purple', rgb: {red: 128, green:0, blue: 128}}
             ], 
-            color: 'red',
+            color: {red: 255, green:0, blue: 0}
           };
         }
 
   render() {
     const colorRender = {
-      backgroundColor: this.state.color
+      backgroundColor: `rgb(${this.state.color.red}, ${this.state.color.green}, ${this.state.color.blue})`
     };
     console.log('this.state.color:', this.state.color);
 
     if (this.state.showList){
       return (
-        <section style={colorRender}>
-          <Input clicked={e => this.setState({ showList: false })}/>
-          <List colors={this.state.allColors} clicked={color => this.setState({color})} />
-          <Slider slide={value => console.log(value)}/>
+        <section className='colorMenu'>
+          <div className='colorSquare' style={colorRender}>
+            <Input clicked={e => this.setState({ showList: false })}/>
+            <List colors={this.state.allColors} clicked={color => this.setState({color})} />
+          </div>
+          <div className='sliderSection'>
+            <Slider slide={value => console.log(value)}/>
+          </div>
         </section>
       );
     }
     return (
-     <section>
+     <section className='colorSquare'>
         <Input clicked={e => this.setState({showList: true})}/>
     </section>
   );

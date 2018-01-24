@@ -4,14 +4,11 @@ import './list.css';
 
 export default function List(props){
 
+  const items = props.colors.map((item, index) => <Item key={index} name={item.color} color={item.rgb} clicked={color => props.clicked(color)}/>);
+  
   return (   
     <ul className='list'>
-        <Item color="red" clicked={color => props.clicked(color)}/>
-        <Item color="orange" clicked={color => props.clicked(color)}/>
-        <Item color="yellow" clicked={color => props.clicked(color)}/>
-        <Item color="green" clicked={color => props.clicked(color)}/>
-        <Item color="blue" clicked={color => props.clicked(color)}/>
-        <Item color="purple" clicked={color => props.clicked(color)}/>
+        {items}
     </ul>
   )
 }

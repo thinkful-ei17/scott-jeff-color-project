@@ -1,9 +1,9 @@
 import React from 'react';
 
 export default function Item(props) {
-  
+
   return (
-    <li>
+    <li onClick={e => props.clicked(props.color)}>
       {props.color}
     </li>
   );

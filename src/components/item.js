@@ -4,7 +4,7 @@ export default function Item(props) {
   
   return (
     <li>
-      Hello World
+      {props.color}
     </li>
   );
 }

@@ -1,0 +1,13 @@
+li {
+  box-sizing: border-box;
+  border: 1px solid black;
+  height: 30px;
+  width: 200px;
+  margin: 0 auto;
+  padding-top: 4px;
+  text-align: center;
+}
+
+li:hover{
+  background-color: white;
+}

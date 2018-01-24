@@ -20,7 +20,7 @@ export default class App extends React.Component {
               {color: 'blue', rgb: {red: 0, green:0, blue: 255}},
               {color: 'purple', rgb: {red: 128, green:0, blue: 128}}
             ], 
-            color: {red: 255, green:0, blue: 0}
+            color: {red: 255, green:100, blue: 100}
           };
         }
 
@@ -38,7 +38,7 @@ export default class App extends React.Component {
             <List colors={this.state.allColors} clicked={color => this.setState({color})} />
           </div>
           <div className='sliderSection'>
-            <Slider slide={value => console.log(value)}/>
+            <Slider slide={value => this.setState({color:{...this.state.color, red:value}})}/>
           </div>
         </section>
       );
@@ -50,6 +50,3 @@ export default class App extends React.Component {
   );
 }
 }
-
-//BEYOND MVP: RGB Slider
-//Hexademical input 
